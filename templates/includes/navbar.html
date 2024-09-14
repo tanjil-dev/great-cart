@@ -1,0 +1,273 @@
+{% load static %}
+
+<style>
+.header {
+  /* background-color: rgb(154, 107, 60); */
+  font-family: sans-serif;
+  /* color: #4a5568; */
+  width: 100vw;
+}
+
+.navbar-top {
+  background-color: rgb(166, 122, 78);
+  width: 100vw;
+  
+  padding:0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: #667eea;
+  border-radius: 50%;
+  fill: white;
+  margin-right: 10px;
+}
+
+/* Style for the container */
+.dropdown-container {
+  display: hidden;
+      position: relative;
+      width: 200px;
+    }
+
+    @media (max-width: 768px) {
+   .nav-link svg {
+    display: none;
+  }
+ 
+}
+
+    /* Style for the select box */
+
+
+    .mainIcon{
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+.logo-text {
+  font-size: 15px;
+  align-items: center;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+
+
+.nav-link {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link svg {
+      fill:  white;
+      width: 20px;
+  height: 20px;
+    }
+
+.nav-link a:hover svg {
+  fill: #2d3748;
+}
+
+  
+
+.nav-link:hover {
+  color: #1a202c;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #edf2f7;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e2e8f0;
+}
+
+.button-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+.Soon{
+  color: gold;
+}
+
+</style>
+
+<div class="content">
+  <header class="header">
+    <!-- <div class="top-bar">
+      <div class="country-selector">COUNTRY ▼</div>
+      <div class="free-delivery">FREE DELIVERY</div>
+      <div class="social-media">
+        <a href="https://www.instagram.com/lojastore.pk/"
+          ><img src="{% static 'images/instagram icon.png' %}" alt="Instagram"
+        /></a>
+        <a href="https://www.facebook.com/lojastore.pk"
+          ><img src="{% static 'images/facebok icon.png' %}" alt="Facebook"
+        /></a>
+        <a href="{% url 'cart' %}" class="cart-link">
+          <div class="cart-icon">
+            <span class="cart-count">{{ cart_count }}</span>
+            
+            &#128722;
+          </div>
+        </a>
+      </div>
+    </div> -->
+
+    <div class="navbar-top">
+
+     <div class="mainIcon">
+      <h2>LOGA</h2>
+     </div>
+
+
+      <div class="">
+
+          <span class="logo-text">Our whole story will come soon with all products, <span class="Soon">Comming Soon</span> </span>
+
+      </div>
+      
+
+      <div class="logo">
+        
+        
+        
+        <nav class="nav">
+          <a href="https://www.facebook.com/lojastore.pk" class="nav-link" target="_blank"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg></a>
+          <a href="#" class="nav-link" target="_blank"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg></a>
+          <a href="https://www.instagram.com/lojastore.pk" target="_blank" class="nav-link"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg></a>
+          <a href=""{% static "/images/LinkedIn.png" %}"" target="_blank" class="nav-link"><svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg></a>
+        </nav>
+      </div>
+     
+    </div>
+
+
+    <div class="main-nav">
+      <div class="nav-left">
+        <a href="{% url 'contact' %}" class="contact-us">CONTACT US</a>
+      </div>
+      <a href="/store">
+        <div class="logo">
+          <img src="{% static 'images/loja logo (1).png' %}" alt="Loja" />
+        </div>
+      </a>
+      <div class="nav-right">
+        {% if user.id is None %}
+        <a href="{% url 'login' %}" class="login-register"
+          >LOGIN / <a href="{% url 'register' %}">REGISTER</a></a
+        >
+        {% else %}
+        <span>{{ user.first_name|capfirst }}</span>
+        <a href="{% url 'dashboard' %}" class="">Dashboard</a>
+        <a href="{% url 'logout' %}" class="login-register">Logout</a>
+        {% endif %}
+      </div>
+    </div>
+    <nav class="bottom-nav">
+      <ul>
+        {% url 'home' as home_url %}
+        <li class="{% if request.path == home_url %}active{% endif %}">
+          <a href="{{ home_url }}">HOME</a>
+        </li>
+        {% for category in categories %}
+        <li
+          class="nav-item {% if request.path == category.get_absolute_url %}active{% endif %}"
+        >
+          <a href="{% url 'products_by_category' category.slug %}"
+            >{{ category.category_name }}</a
+          >
+          <ul class="dropdown-menu">
+            {% for subcategory in category.subcategories.all %}
+            <li class="dropdown-item">
+              <a href="{% url 'subcategory_detail' subcategory.slug %}"
+                >{{ subcategory.subcategory_name }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+        <li><a href="{% url 'store' %}">LOJA PRODUCTS</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <ul>
+        {% url 'home' as home_url %}
+        <li class="{% if request.path == home_url %}active{% endif %}">
+          <a href="{{ home_url }}">HOME</a>
+        </li>
+        {% for category in categories %}
+        <li class="nav-item">
+          <a href="{% url 'products_by_category' category.slug %}"
+            >{{ category.category_name }}</a
+          >
+          <ul class="dropdown-menu">
+            {% for subcategory in category.subcategories.all %}
+            <li class="dropdown-item">
+              <a href="{% url 'subcategory_detail' subcategory.slug %}"
+                >{{ subcategory.subcategory_name }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+        <li><a href="{% url 'store' %}">LOJA PRODUCTS</a></li>
+        <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>

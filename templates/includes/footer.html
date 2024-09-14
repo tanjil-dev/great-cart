@@ -1,0 +1,229 @@
+{% load static %}
+
+<style>
+  footer {
+    background-color: rgb(154, 107, 60);
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .brand {
+    text-align: center;
+    margin-bottom: 40px;
+    flex: 1 1 100%;
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #1a202c;
+  }
+
+  .brand-link svg {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background-color: #6366f1;
+    border-radius: 50%;
+    fill: white;
+  }
+
+  .brand-title {
+    font-size: 2.5rem;
+    margin-left: 10px;
+    color: white;
+  }
+
+  .brand-description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .links-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .links-column {
+    width: 22%;
+    margin-bottom: 20px;
+  }
+
+  .links-column h2 {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .links-column nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .links-column nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .links-column nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .links-column nav ul li a:hover {
+    color: #2d3748;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: white;
+  }
+
+  .footer-bottom a {
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+
+  .footer-bottom a:hover {
+    color: #2d3748;
+  }
+
+  .social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-links a {
+    margin: 0 5px;
+  }
+
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+
+  .social-links a:hover svg {
+    fill: #2d3748;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links-section {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links-column {
+      width: 80%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .links-column {
+      width: 100%;
+    }
+  }
+</style>
+
+
+<footer>
+    <div class="footer-container">
+      <div class="brand">
+        <a class="brand-link" href="#">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg> -->
+          <span class="brand-title">LOGA</span>
+        </a>
+        <p class="brand-description">Kaftan Fashion </p>
+      </div>
+      <div class="links-section">
+        <div class="links-column">
+          <h2>Menu</h2>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="/store/clothes">Clothes</a></li>
+              <li><a href="/store/accesories">Accessories</a></li>
+              <li><a href="/store/appliances">Appliances</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="links-column">
+          <h2>CATEGORIES</h2>
+          <nav>
+            <ul>
+              <li><a href="/store">Loga Products</a></li>
+              <li><a href="/account/login">About Us</a></li>
+              <li><a href="#">Term and policies</a></li>
+              <li><a href="/account/contact">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Loja. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/lojastore.pk" target="_blank"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg></a>
+        <a href=""><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg></a>
+        <a href="https://www.instagram.com/lojastore.pk " target="_blank"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg></a>
+        <a href="{% static "/images/LinkedIn.png" %}" target="_blank"><svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg></a>
+      </div>
+    </div>
+  </footer>
+  
+
+<!-- ========================= FOOTER END // ========================= -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.thumb a').click(function(e){
+			e.preventDefault();
+			$('.mainImage img').attr('src',$(this).attr('href'));
+		})
+	})
+</script>
+</body>
+</html>
